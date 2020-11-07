@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1201657",
+    "ThreadId": "528627",
+    "Html": "Hello, I have just started to use the 8085 Simulator.\r<br />\nWhen I enter any value using Memory Editor and assemble my program,it Resets it.\r<br />\nAnd it is not usable. \r<br />\nPlease tell me how to store values at required memory locations manually.<br />\n",
+    "PostedDate": "2014-02-01T10:43:11.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

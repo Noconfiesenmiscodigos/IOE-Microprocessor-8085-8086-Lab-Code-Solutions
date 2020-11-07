@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": "",
+    "Description": "..\n...\n; Cy = 1 (from some previous instr.)\nMVI A,88h \nDAA        ; result should be EEh, not 52h\n \nRegards,\nBoris",
+    "LastUpdatedDate": "2013-02-21T16:33:00.25-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "8085Simulator",
+    "ReportedDate": "2010-09-04T04:28:57.537-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "DAA instruction",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7212
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

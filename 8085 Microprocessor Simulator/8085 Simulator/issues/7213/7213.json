@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I've noticed that when subtracting a Zero from A, the Carry flag gets set. \r\n\r\neg:\r\n\r\nMVI A, 1H\r\nSUI 0\r\n\r\nThe Carry Flag gets set. \r\n\r\nUnluckily, I dont have a real 8085 to try it out, but on an Emulator the same operation didnt set the carry flag.\r\n\r\nRegards,\r\nAsaad",
+    "LastUpdatedDate": "2016-10-06T07:27:34.54-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "8085Simulator",
+    "ReportedDate": "2016-10-06T07:27:34.54-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Subtraction of a Zero sets the Carry Flag",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 7213
+  },
+  "FileAttachments": [],
+  "Comments": []
+}
