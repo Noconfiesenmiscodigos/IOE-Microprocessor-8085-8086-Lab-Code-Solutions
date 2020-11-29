@@ -1,0 +1,27 @@
+;Convert the problem no 2 for 16-bit numbers.
+
+.MODEL SMALL
+.STACK 64
+.CODE	
+
+MOV BX,0000H
+MOV DI,300H	
+MOV [DI],9FFFH
+MOV [DI+2],8EEEH
+
+MOV DI,300H
+MOV AX,[DI]
+ADD DI,02H
+ADD AX,[DI]
+JNC TE
+INC BX
+
+TE:	ADD DI,02H	
+MOV [DI],AX
+ADD DI,02H
+MOV [DI],BX
+MOV AH,4CH
+INT 21H
+
+END
+	

@@ -1,0 +1,26 @@
+;Solve problem 5 for subtraction of 16-bit numbers.
+
+.MODEL SMALL
+.STACK 64
+.CODE	 
+
+MOV DI,0204H
+MOV [DI],9FFFH
+MOV [DI-2],1111H
+
+MOV AX,0000H
+MOV BX,0000H
+MOV DI,0202H
+MOV AX,[DI]
+SUB AX,[DI+2]
+JNC TE
+INC BX
+
+TE:	MOV DI,0206H	
+MOV [DI],AX
+MOV [DI+2],BX
+MOV AH,4CH
+INT 21H
+
+END
+	
