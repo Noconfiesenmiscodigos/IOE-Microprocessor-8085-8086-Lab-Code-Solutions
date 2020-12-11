@@ -1,0 +1,48 @@
+;Write an assembly language program that takes a string (having 60 characters at max.) as input from user, and display the string at the center of the clear screen.
+
+TITLE DISPLAYING AT THE CENTER
+.MODEL SMALL
+.DATA
+STRLEN DB 60
+STRSZ DB ?
+STR DB 60 DUP('$')
+STRTRM DB '$'
+.STACK
+.CODE
+
+MAIN PROC FAR
+MOV AX, @DATA
+MOV DS, AX
+
+;; READING FROM THE USER
+LEA DX, STRLEN
+MOV AH, 0AH
+INT 21H
+
+;; CLEARING THE SCREEN
+MOV AH, 00
+MOV AL, 03H
+INT 10H
+
+;; MOVING THE CURSOR
+MOV BH, 00
+MOV DH, 00
+MOV AL, 80
+MOV DL, STRSZ
+SUB AL, DL
+MOV DL, 02H
+DIV DL
+MOV DL, AL
+MOV AH, 02H
+INT 10H
+
+;; DISPLAYING THE STRING
+LEA DX, STR
+MOV AH, 09H
+INT 21H
+
+;; ENDING THE PROGRAM
+MOV AX, 4C00H
+INT 21H
+MAIN ENDP
+END MAIN

@@ -1,0 +1,46 @@
+;Write a program to read string from the user (use function that reads string) and display the string in another line. (To display the character in new line display characters 0DH and 0AH)
+
+TITLE READ FROM THE KEYBOARD
+.MODEL SMALL
+.DATA
+STRLEN DW 20
+STR DB 20 DUP(' ')
+.STACK
+.CODE
+MAIN PROC FAR
+MOV AX, @DATA
+MOV DS, AX
+
+;; READING STRING
+MOV CX, STRLEN
+LEA BX, STR
+
+L1: MOV AH, 01H
+INT 21H
+MOV BYTE PTR[BX], AL
+INC BX
+LOOP L1
+
+;; NEW LINE CHARACTER
+MOV DL, 0DH
+MOV AH, 02H
+INT 21H
+MOV DL, 0AH
+MOV AH, 02H
+INT 21H
+
+;; WRITING STRING
+MOV CX, STRLEN
+LEA BX, STR
+L2: MOV AH, 02H
+MOV DL, BYTE PTR[BX]
+INT 21H
+
+INC BX
+LOOP L2
+
+;; ENDING PROGRAM
+MOV AX, 4C00H
+INT 21H
+MAIN ENDP
+END MAIN
